@@ -26,7 +26,7 @@ iPlug3 has a long lineage:
 | **2011** | **[WDL-OL](https://github.com/olilarkin/wdl-ol)** — My fork published (used for [Endless Series](https://www.olilarkin.co.uk/index.php?p=eseries)) |
 | **2014** | **iPlug 1.5** — Rebuilt on VST3 for [VirtualCZ](https://www.olilarkin.co.uk/index.php?p=virtualcz) (never shared publicly) |
 | **2018** | **[iPlug 2](https://iplug2.github.io/)** with [Alex Harker](https://github.com/alexharker) — First plug-in framework to target the web via Emscripten, with Web Audio Module support (I was a co-author of [WAM v1](https://files01.core.ac.uk/download/pdf/144846764.pdf)), HiDPI, vector graphics |
-| **2026** | **iPlug 3** — Agentic-first architecture, SOTA graphics |
+| **2026** | **iPlug 3** — Greenfield project, Agentic-first architecture, minimal modern C++, SOTA graphics |
 
 Over these years, iPlug2 powered an impressive range of commercial and open-source plug-ins: [Full Bucket Music](https://www.fullbucket.de/music/)'s 30+ vintage synth emulations, [Surreal Machines](https://www.surrealmachines.com/)' Impact/Modnetic/Diffuse, [Forever 89](https://forever89.studio/)'s Visco and Topos, the [Neural Amp Modeler](https://www.neuralampmodeler.com/the-code), and many more.
 
