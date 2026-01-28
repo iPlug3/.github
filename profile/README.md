@@ -177,11 +177,13 @@ iPlug3 draws from the best ideas across graphics frameworks, plug-in architectur
 
 ### Current Status
 
-- All MPLUG plug-in formats working and validating on all platforms
+- All MPLUG plug-in formats and examples (like iPlug2's) working and validating on all platforms
 - Some gaps remain (e.g., state serialization) as different options are explored
 - Many MGFX demos complete; currently refactoring and cleaning up examples
 - **Supported Platforms**: macOS, Windows, Linux, iOS, visionOS, Web/WASM (Android TBC)
 
+### v 0.0.1
+- ETA - not sure - more tweaking needed.
 
 ## License
 
