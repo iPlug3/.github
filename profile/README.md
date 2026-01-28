@@ -38,6 +38,8 @@ iPlug3 consists of two complementary component frameworks (names subject to chan
 
 ### MPLUG — *Micro Plug-in Abstraction* (or *MyPlug*)
 
+<img width="256" height="256" alt="mplug-small" src="https://github.com/user-attachments/assets/ffb9eb2e-a5b9-4d97-9344-bcd1d259d846" />
+
 By "plug-in" we mean anything that processes audio with a plug-in-like interface—real-time in a DAW, offline for batch processing, or part of a machine learning pipeline used only for training. Write it once as a minimal, plain C++20 class using a clean abstraction. The API uses C++20 concepts rather than inheritance—your plug-in class is validated at compile-time without virtual function overhead. This produces cleaner error messages, faster runtime performance, and code that agents can reason about more effectively. Format adapters handle the rest. Whilst many projects are starting to use CLAP as a baseline format and wrap to other formats, a format-agnostic abstraction allows for better agentic workflows—the agent doesn't need to understand any particular plug-in format's quirks, and can better abstract to, for instance, Python bindings.
 
 - **[CLAP](https://cleveraudio.org/), VST3, AU** — Desktop plug-in formats
@@ -55,6 +57,8 @@ By "plug-in" we mean anything that processes audio with a plug-in-like interface
 **Modern C++** - iPlug3 finally breaks away from the dependency on [Cockos WDL](https://www.cockos.com/wdl/) that iPlug has carried since 2008. I'm a fan of REAPER and WDL, however, WDL's custom string classes and containers are not ideal for agentic AI—their usage not widespread and they are poorly documented, so agents don't know them as well as standard C++. The plug-in abstraction uses pure standard C++20/STL with no legacy dependencies. CMake handles resource bundling, code signing, and all the platform-specific packaging that required custom scripts in iPlug2. CMake is notoriously painful to write—but that's exactly the kind of task you hand to an agent.
 
 ### MGFX — *Massive Graphics Abstraction* (or *MyGraphics*)
+
+<img width="256" height="256" alt="mgfx-small" src="https://github.com/user-attachments/assets/96b1ab46-c294-4a52-a207-c7b70932e95d" />
 
 A standalone UI and creative coding framework that powers iPlug3's visual layer. Google's libraries (Dawn, Skia) are unfortunately quite large and difficult to build, but this is a trade-off I'm willing to accept for best-in-class quality and cross-platform reliability. In iPlug2 I tried to provide different backends offering lightweight or heavyweight solutions, but for MGFX I want to focus on the best—not worry about making it lightweight. I've been [thinking about these graphics architecture decisions for years](https://forum.juce.com/t/fr-improve-opengl-by-integrating-angle/64685/10?u=olilarkin). My project [skia-builder](https://github.com/olilarkin/skia-builder) builds prebuilt binaries for MGFX that get downloaded by CMake automatically.
 
