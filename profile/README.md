@@ -63,7 +63,7 @@ By "plug-in" we mean anything that processes audio with a plug-in-like interface
 
 A standalone UI and creative coding framework that powers iPlug3's visual layer. Google's libraries (Dawn, Skia) are unfortunately quite large and difficult to build, but this is a trade-off I'm willing to accept for best-in-class quality and cross-platform reliability. In iPlug2 I tried to provide different backends offering lightweight or heavyweight solutions, but for MGFX I want to focus on the best—not worry about making it lightweight. I've been [thinking about these graphics architecture decisions for years](https://forum.juce.com/t/fr-improve-opengl-by-integrating-angle/64685/10?u=olilarkin). My project [skia-builder](https://github.com/olilarkin/skia-builder) builds prebuilt binaries for MGFX that get downloaded by CMake automatically.
 
-- **WebGPU Navtive [Dawn](https://dawn.googlesource.com/dawn)** — Modern GPU API with WGSL for cross-platform low level shaders
+- **WebGPU Native [Dawn](https://dawn.googlesource.com/dawn)** — Modern GPU API with WGSL for cross-platform low level shaders
 - **[Skia](https://skia.org/) Graphite** — GPU-accelerated 2D rendering with HTML5 Canvas-like API and [SkSL](https://shaders.skia.org/) for runtime-compiled simple GLSL-like fragment shaders
 - **[SDL3](https://wiki.libsdl.org/SDL3/FrontPage)** — Cross-platform windowing, input/events, and system integration
 - **jsengine** — Abstraction over QuickJS/V8/JavaScriptCore to provide the best JavaScript engine for each platform
@@ -76,6 +76,7 @@ A standalone UI and creative coding framework that powers iPlug3's visual layer.
 - **Cross-platform native integration** — File dialogs, message boxes, and popup menus that use the platform's native UI, or custom-styled popup windows rendered with your own look and feel
 - **Multi-window support** — Independent windows for floating palettes, inspectors, custom popup menus, and multi-monitor workflows
 - **Extensive examples** — Dozens of demos showcasing audio visualizers, 3D rendering, canvas drawing, and interactive controls
+- **Offline video rendering mode** - Perfect for rendering high quality Audio-Visual content on a frame-by-frame basis
 
 UI code can be written in JavaScript for rapid prototyping, but also in C++ using the same Canvas-like API. With iPlug3's fast build system and agent-assisted iteration, C++ may actually be preferable—you get the same quick feedback loop without the bridging complexity.
 
