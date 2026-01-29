@@ -47,6 +47,7 @@ By "plug-in" we mean anything that processes audio with a plug-in-like interface
 - **[WebCLAP](https://github.com/WebCLAP), [WAMv2](https://www.webaudiomodules.com/)** — Browser-based plug-ins
 - **Standalone apps** — macOS, Windows, Linux, iOS, visionOS
 - **Python/Node.js modules** — Scriptable plug-in instances
+- **Leans on [CMake](https://cmake.org)** - Ubiquitous and powerful build system
 - **Leans on [CHOC](https://github.com/Tracktion/choc)** — High quality, ISC-licensed audio-related classes
 - **MIDI2 support** — Via [libremidi](https://github.com/celtera/libremidi)
 - **MPE support** — Built-in synth engine with per-note expression via MIDI Polyphonic Expression
@@ -62,15 +63,16 @@ By "plug-in" we mean anything that processes audio with a plug-in-like interface
 
 A standalone UI and creative coding framework that powers iPlug3's visual layer. Google's libraries (Dawn, Skia) are unfortunately quite large and difficult to build, but this is a trade-off I'm willing to accept for best-in-class quality and cross-platform reliability. In iPlug2 I tried to provide different backends offering lightweight or heavyweight solutions, but for MGFX I want to focus on the best—not worry about making it lightweight. I've been [thinking about these graphics architecture decisions for years](https://forum.juce.com/t/fr-improve-opengl-by-integrating-angle/64685/10?u=olilarkin). My project [skia-builder](https://github.com/olilarkin/skia-builder) builds prebuilt binaries for MGFX that get downloaded by CMake automatically.
 
-- **WebGPU + [Dawn](https://dawn.googlesource.com/dawn)** — Modern GPU API with WGSL for cross-platform shaders
-- **[Skia](https://skia.org/) Graphite** — GPU-accelerated 2D rendering with HTML5 Canvas-like API and SkSL
-- **[SDL3](https://wiki.libsdl.org/SDL3/FrontPage)** — Cross-platform windowing, input, and system integration
+- **WebGPU Navtive [Dawn](https://dawn.googlesource.com/dawn)** — Modern GPU API with WGSL for cross-platform low level shaders
+- **[Skia](https://skia.org/) Graphite** — GPU-accelerated 2D rendering with HTML5 Canvas-like API and [SkSL](https://shaders.skia.org/) for runtime-compiled simple GLSL-like fragment shaders
+- **[SDL3](https://wiki.libsdl.org/SDL3/FrontPage)** — Cross-platform windowing, input/events, and system integration
 - **jsengine** — Abstraction over QuickJS/V8/JavaScriptCore to provide the best JavaScript engine for each platform
 - **Flexible resource/asset system** — Load images, fonts, shaders, and other assets from disk, memory, or embedded resources with a unified API
 - **Extensive themeable widgets and 2D UI system** — Knobs, sliders, meters, and controls designed for audio UIs
 - **Audio visualization system** — Metering ballistics, STFT processing abstractions, and lock-free queues for getting data to the UI in the fastest, most memory-efficient way possible
 - **Post-processing effects** — Bloom, blur, CRT simulation, and other full-screen effects via offscreen render targets
 - **Accessible by default** — Built-in cross-platform accessibility support
+- **WebViews** — Host web content inside a view or window
 - **Cross-platform native integration** — File dialogs, message boxes, and popup menus that use the platform's native UI, or custom-styled popup windows rendered with your own look and feel
 - **Multi-window support** — Independent windows for floating palettes, inspectors, custom popup menus, and multi-monitor workflows
 - **Extensive examples** — Dozens of demos showcasing audio visualizers, 3D rendering, canvas drawing, and interactive controls
