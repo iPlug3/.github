@@ -199,3 +199,5 @@ With iPlug3, I don't want to enable generating mediocre plug-ins from prompts. W
 Join the discussion in the **#iplug3** channel on the [iPlug Discord](https://discord.com/invite/7h9HW8N9Ke).
 
 *Oli Larkin, Berlin, Jan 2026*
+
+[my github profile](https://github.com/olilarkin) | [linkedin](https://www.linkedin.com/in/olilarkin/)
