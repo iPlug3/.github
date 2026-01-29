@@ -44,9 +44,9 @@ By "plug-in" we mean anything that processes audio with a plug-in-like interface
 
 - **[CLAP](https://cleveraudio.org/), VST3, AU** — Desktop plug-in formats
 - **AUv3** — Sandboxed, out-of-process audio plug-in format for iOS/visionOS
-- **[WebCLAP](https://github.com/WebCLAP), [WAMv2](https://www.webaudiomodules.com/)** — Browser-based plug-ins
+- **[WebCLAP](https://github.com/WebCLAP), [WAMv2](https://www.webaudiomodules.com/)** — Portable WASM/browser oriented plug-ins formats
 - **Standalone apps** — macOS, Windows, Linux, iOS, visionOS
-- **Python/Node.js modules** — Scriptable plug-in instances
+- **Python/Node.js modules** — Bindings for integration of DSP into Python or node scripts, for testing or server side audio rendering etc.
 - **Leans on [CMake](https://cmake.org)** - Ubiquitous and powerful build system
 - **Leans on [CHOC](https://github.com/Tracktion/choc)** — High quality, ISC-licensed audio-related classes
 - **MIDI2 support** — Via [libremidi](https://github.com/celtera/libremidi)
