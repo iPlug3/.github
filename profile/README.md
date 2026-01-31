@@ -113,7 +113,7 @@ iPlug3 is built with AI-assisted development as a first-class concern:
 - **Parameterize everything** — APIs that agents can reason about and use for validation
 - **DSLs are first class citizens** — [FAUST](https://faust.grame.fr/), [Cmajor](https://cmajor.dev/), and [JSFX](https://www.reaper.fm/sdk/js/js.php) can be integrated easily - with hot reloading in development and optimized codegen for production.
 
-This enables workflows where agents analyze plug-in screenshots, follow user annotations, run validation tools (pluginval, auval, vstvalidator, asan, tsan, rtsan), and confirm expected behavior through short feedback loops.
+This enables workflows where agents analyze plug-in screenshots, follow user annotations, control the debugger, run sanitizers (address sanitizer, threadsanitizer, [rtsan](https://clang.llvm.org/docs/RealtimeSanitizer.html)), run validation tools ([pluginval](https://github.com/Tracktion/pluginval), auval, vstvalidator) and confirm expected behavior through short feedback loops.
 
 ## Plug-ins as MCP Servers
 
